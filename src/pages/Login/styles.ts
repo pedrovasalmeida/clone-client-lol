@@ -28,6 +28,7 @@ export const UserLogin = styled.div`
   justify-content: center;
 
   min-width: 400px;
+  max-width: 400px;
 
   background: #fdfcff;
   opacity: 0.98;
@@ -43,12 +44,81 @@ export const UserLogin = styled.div`
 export const Title = styled.span`
   font-weight: bold;
   font-size: 20px;
+  font-variant: small-caps;
+  font-feature-settings: 'pnum' on, 'onum' on;
 
   margin: 10px 0;
+  margin-bottom: 20px;
   pointer-events: none;
 `;
 
-export const SocialLogin = styled.div``;
+export const SocialLogin = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  width: 80%;
+  height: 40px;
+
+  margin: 10px 0;
+
+  > span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    cursor: pointer;
+  }
+
+  .facebook {
+    background: #3b66bf;
+    margin: 0 auto;
+    width: 32%;
+    height: 90%;
+    color: #fff;
+    border-radius: 4px;
+
+    &:hover {
+      background: #2d4e91;
+    }
+  }
+
+  .google {
+    background: #fff;
+    margin: 0 auto;
+    width: 32%;
+    height: 90%;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+
+    &:hover {
+      background: #eee;
+    }
+  }
+
+  .apple {
+    background: #000;
+    margin: 0 auto;
+    width: 32%;
+    height: 90%;
+    color: #fff;
+    border-radius: 4px;
+
+    &:hover {
+      background: #222;
+    }
+  }
+`;
+
+export const WarningMessage = styled.span`
+  font-weight: 700;
+  font-size: 18px;
+  font-variant: small-caps;
+  font-feature-settings: 'pnum' on, 'onum' on;
+  color: #d43537;
+
+  padding: 0 40px;
+`;
 
 export const LogOn = styled.button<LogOnProps>`
   display: flex;
@@ -58,7 +128,8 @@ export const LogOn = styled.button<LogOnProps>`
   width: 70px;
   height: 70px;
 
-  margin: 30px 0;
+  margin-top: 60px;
+  margin-bottom: 100px;
 
   border: 2px solid gray;
   border-radius: 15px;
@@ -86,7 +157,42 @@ export const LogOn = styled.button<LogOnProps>`
     `};
 `;
 
-export const Links = styled.div``;
+export const Links = styled.div`
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  span {
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
+
+    color: #ccc;
+
+    margin: 5px 0;
+
+    cursor: default;
+
+    &.enabled {
+      cursor: pointer;
+      &:hover {
+        color: #000;
+      }
+    }
+  }
+
+  > div {
+    display: flex;
+
+    > span {
+      position: absolute;
+      right: -50px;
+      bottom: 0;
+    }
+  }
+`;
 
 export const Client = styled.div``;
 
@@ -128,16 +234,19 @@ export const Dialog = styled.div`
   justify-content: center;
 
   background: #fff;
+  border-radius: 4px;
 
   width: 250px;
-  height: 100px;
+  min-height: 50px;
+  height: auto;
 
   padding: 15px;
 
   filter: drop-shadow(0 0 6px #000);
 
   > span {
-    font-size: 14px;
+    font-variant: small-caps;
+    font-feature-settings: 'pnum' on, 'onum' on;
     font-weight: bold;
   }
 
