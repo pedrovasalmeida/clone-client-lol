@@ -1,19 +1,16 @@
 /** Packages */
 import React from 'react';
-import { Switch, Route } from 'react-router-dom';
+import Login from '../pages/Login';
 
 /** Pages */
-import Home from '../pages/Home';
-import NotFound from '../pages/NotFound';
-import CleanPage from '../pages/CleanPage';
+import { useAuth } from '../context/auth';
 
-const Routes: React.FC = () => (
-  <Switch>
-    <Route path="/" exact component={Home} />
-    <Route path="/clean" component={CleanPage} />
+import Logged from './Logged';
 
-    <Route path="/" component={NotFound} />
-  </Switch>
-);
+const Routes: React.FC = () => {
+  const { user } = useAuth();
+
+  return user ? <Logged /> : <Login />;
+};
 
 export default Routes;
