@@ -10,7 +10,7 @@ export const Container = styled.div<InputProps>`
   align-items: flex-start;
   justify-content: center;
 
-  width: 60%;
+  width: 80%;
   height: 50px;
 
   margin: 10px 0;
