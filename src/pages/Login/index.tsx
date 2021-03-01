@@ -103,9 +103,27 @@ const Login: React.FC = () => {
               </p>
 
               <div>
-                <p>LinkedIn</p>
-                <p>GitHub</p>
-                <p>Instagram</p>
+                <a
+                  href="https://www.linkedin.com/in/pedrovasalmeida/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+                <a
+                  href="https://github.com/pedrovasalmeida"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://www.instagram.com/pedroohva/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
               </div>
             </InsideVersionDialog>
           </VersionDialog>

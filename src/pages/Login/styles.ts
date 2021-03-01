@@ -71,7 +71,7 @@ export const SocialLogin = styled.div`
   }
 
   .facebook {
-    background: #3b66bf;
+    background: #1878f3;
     margin: 0 auto;
     width: 32%;
     height: 90%;
@@ -79,7 +79,7 @@ export const SocialLogin = styled.div`
     border-radius: 4px;
 
     &:hover {
-      background: #2d4e91;
+      background: #1166d4;
     }
   }
 
@@ -324,7 +324,7 @@ export const InsideVersionDialog = styled.div`
     justify-content: space-between;
     margin: 10px 0;
 
-    > p {
+    > a {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -332,18 +332,20 @@ export const InsideVersionDialog = styled.div`
       min-width: 110px;
 
       font-size: 16px;
+      font-weight: bold;
       padding: 10px;
 
       color: #000;
-      background: #008ad3;
+      background: #1878f3;
 
       border-radius: 4px;
 
+      text-decoration: none;
       cursor: pointer;
 
       &:hover {
         color: #ddd;
-        background: #0c9ce8;
+        background: #3b8ef7;
       }
     }
   }
