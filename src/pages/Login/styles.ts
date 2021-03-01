@@ -266,3 +266,85 @@ export const Dialog = styled.div`
     background: #fff;
   }
 `;
+
+export const VersionDialog = styled.div`
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  width: 100vw;
+  height: 100vh;
+
+  background: rgba(255, 255, 255, 0.9);
+`;
+
+export const InsideVersionDialog = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+
+  padding: 30px;
+
+  border-radius: 4px;
+  background: #000;
+
+  width: 450px;
+  height: 270px;
+
+  > svg {
+    position: absolute;
+    top: 28px;
+    right: 20px;
+    color: #fff;
+
+    cursor: pointer;
+  }
+
+  > span,
+  p {
+    font-weight: bold;
+    font-size: 26px;
+    color: #fff;
+  }
+
+  > p {
+    font-weight: 400;
+    font-size: 18px;
+    margin: 40px 0;
+  }
+
+  > div {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+
+    > p {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-width: 110px;
+
+      font-size: 16px;
+      padding: 10px;
+
+      color: #000;
+      background: #008ad3;
+
+      border-radius: 4px;
+
+      cursor: pointer;
+
+      &:hover {
+        color: #ddd;
+        background: #0c9ce8;
+      }
+    }
+  }
+`;

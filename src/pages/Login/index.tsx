@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FiArrowRight } from 'react-icons/fi';
 import { FaFacebook, FaApple } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
+import { IoMdClose } from 'react-icons/io';
 import Logo from '../../assets/logo-lol.svg';
 import Wallpaper from '../../assets/wallpaper-client.jpg';
 
@@ -23,12 +24,15 @@ import {
   Background,
   QuestionIcon,
   Dialog,
+  VersionDialog,
+  InsideVersionDialog,
 } from './styles';
 
 const Login: React.FC = () => {
   const { signIn, userDataFromInput } = useAuth();
 
   const [showDialog, setShowDialog] = useState(false);
+  const [showVersionDialog, setShowVersionDialog] = useState(false);
 
   return (
     <Container>
@@ -83,12 +87,41 @@ const Login: React.FC = () => {
           <FiArrowRight size={40} />
         </LogOn>
 
+        {showVersionDialog && (
+          <VersionDialog>
+            <InsideVersionDialog>
+              <IoMdClose
+                size={30}
+                onClick={() => setShowVersionDialog(false)}
+              />
+              <span>v1.0.0</span>
+
+              <p>
+                Criado por:
+                <br />
+                Pedro Henrique de Vasconcellos Almeida
+              </p>
+
+              <div>
+                <p>LinkedIn</p>
+                <p>GitHub</p>
+                <p>Instagram</p>
+              </div>
+            </InsideVersionDialog>
+          </VersionDialog>
+        )}
+
         <Links>
           <span>Não consegue iniciar sessão?</span>
 
           <span>Criar conta</span>
           <div>
-            <span className="enabled">v1.0.0</span>
+            <span
+              className="enabled"
+              onClick={() => setShowVersionDialog(true)}
+            >
+              v1.0.0
+            </span>
           </div>
         </Links>
       </UserLogin>
