@@ -72,7 +72,7 @@ const Login: React.FC = () => {
         <WarningMessage>
           Utilize um nome de usuário ficticio. Esse site não tem quaisquer
           vínculos com o League of Legends ou a Riot Games e seu único objetivo
-          é a prática do desenvolvimento front-end!
+          é praticar as habilidades com React e o desenvolvimento front-end!
         </WarningMessage>
 
         <LogOn
