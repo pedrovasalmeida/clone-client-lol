@@ -28,11 +28,12 @@ export const AuthProvider: React.FC = ({ children }) => {
   const signIn = (user: string) => {
     localStorage.setItem('@CloneLol:user', user);
     setUserLogin(user);
+    setUserDataFromInput('');
   };
 
   const signOut = () => {
     localStorage.removeItem('@CloneLol:user');
-
+    setUserDataFromInput('');
     setUserLogin(null);
   };
 
