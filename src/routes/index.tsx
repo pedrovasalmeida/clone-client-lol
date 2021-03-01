@@ -1,16 +1,16 @@
 /** Packages */
 import React from 'react';
-import Login from '../pages/Login';
-
-/** Pages */
+import { BrowserRouter } from 'react-router-dom';
 import { useAuth } from '../context/auth';
 
+/** Pages */
+import Login from '../pages/Login';
 import Logged from './Logged';
 
 const Routes: React.FC = () => {
   const { user } = useAuth();
 
-  return user ? <Logged /> : <Login />;
+  return <BrowserRouter>{user ? <Logged /> : <Login />}</BrowserRouter>;
 };
 
 export default Routes;
