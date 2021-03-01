@@ -43,7 +43,7 @@ export const UserLogin = styled.div`
 
 export const Title = styled.span`
   font-weight: bold;
-  font-size: 20px;
+  font-size: 26px;
   font-variant: small-caps;
   font-feature-settings: 'pnum' on, 'onum' on;
 
