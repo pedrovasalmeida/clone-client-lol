@@ -181,6 +181,10 @@ export const Links = styled.div`
         color: #000;
       }
     }
+
+    &.disabled {
+      pointer-events: none;
+    }
   }
 
   > div {

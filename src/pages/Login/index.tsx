@@ -130,9 +130,9 @@ const Login: React.FC = () => {
         )}
 
         <Links>
-          <span>Não consegue iniciar sessão?</span>
+          <span className="disabled">Não consegue iniciar sessão?</span>
 
-          <span>Criar conta</span>
+          <span className="disabled">Criar conta</span>
           <div>
             <span
               className="enabled"
