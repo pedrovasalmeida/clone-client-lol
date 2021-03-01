@@ -1,15 +1,19 @@
-import React, { useRef, useState } from 'react';
+import React, { InputHTMLAttributes, useRef, useState } from 'react';
+
+import { useAuth } from '../../context/auth';
 
 import { Container } from './styles';
 
-interface InputProps {
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
   text: string;
 }
 
-const Input: React.FC<InputProps> = ({ text }) => {
+const Input: React.FC<InputProps> = ({ text, ...rest }) => {
   const [hasFocused, setHasFocused] = useState(false);
   const [inputValue, setInputValue] = useState('');
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const { setUserData } = useAuth();
 
   const handlePutFocusOnInput = () => {
     setHasFocused(true);
@@ -18,6 +22,7 @@ const Input: React.FC<InputProps> = ({ text }) => {
 
   const handleInputChange = (value: string) => {
     setInputValue(value);
+    setUserData(value);
   };
 
   const handleInputBlur = () => {
@@ -38,6 +43,8 @@ const Input: React.FC<InputProps> = ({ text }) => {
         onChange={e => handleInputChange(e.target.value)}
         onFocus={() => setHasFocused(true)}
         onBlur={handleInputBlur}
+        // eslint-disable-next-line react/jsx-props-no-spreading
+        {...rest}
       />
     </Container>
   );

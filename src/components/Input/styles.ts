@@ -18,21 +18,33 @@ export const Container = styled.div<InputProps>`
 
   border: 0;
   border-radius: 4px;
-  background: #ddd;
-  border: 2px solid #ddd;
+  background: #eeedf0;
+  border: 2px solid #eeedf0;
 
   transition: all 150ms ease;
+
+  cursor: text;
+
+  &:hover {
+    background: #e1e1e3;
+    border: 2px solid #e1e1e3;
+  }
 
   ${p =>
     p.hasFocused &&
     css`
       border: 2px solid #000;
       background: #fff;
+
+      &:hover {
+        background: #fff;
+        border: 2px solid #000;
+      }
     `}
 
   > span {
     position: absolute;
-
+    pointer-events: none;
     color: gray;
 
     font-size: 12px;
