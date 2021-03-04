@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+export const Wrapper = styled.div``;
+
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
@@ -7,9 +9,7 @@ export const Container = styled.div`
   justify-content: center;
 
   max-width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 80px);
 
   padding: 50px;
-
-  background-color: #eeeeee;
 `;
