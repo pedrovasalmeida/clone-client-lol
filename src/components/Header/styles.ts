@@ -15,8 +15,8 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   width: 100%;
-  max-height: 80px;
-  height: 80px;
+  max-height: 100px;
+  height: 100px;
 
   padding: 0 30px;
 

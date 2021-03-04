@@ -23,6 +23,9 @@ import {
   UserCoins,
 } from './styles';
 
+const randomRPValue = Math.floor(Math.random() * (50000 - 100) + 100);
+const randomBPValue = Math.floor(Math.random() * (3000000 - 1000) + 1000);
+
 const Header: React.FC = () => {
   const [isHovered, setIsHovered] = useState(false);
 
@@ -67,11 +70,11 @@ const Header: React.FC = () => {
       <UserCoins>
         <span>
           <img src={RPIcon} alt="shop" />
-          {Math.floor(Math.random() * (50000 - 100) + 100)}
+          {randomRPValue}
         </span>
         <span>
           <img src={BPIcon} alt="shop" />
-          {Math.floor(Math.random() * (3000000 - 1000) + 1000)}
+          {randomBPValue}
         </span>
       </UserCoins>
     </Container>
