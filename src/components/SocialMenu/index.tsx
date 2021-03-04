@@ -10,6 +10,8 @@ import UserPhotoImg from '../../assets/user-photo.png';
 import UserBorder from '../../assets/user-xp-border.png';
 import UserBorderHover from '../../assets/user-xp-border-hover.png';
 
+import { useAuth } from '../../context/auth';
+
 import {
   Container,
   WindowButtons,
@@ -29,6 +31,7 @@ import {
 
 const SocialMenu: React.FC = () => {
   const [photoIsHovered, setPhotoIsHovered] = useState(false);
+  const { user } = useAuth();
 
   return (
     <Container>
@@ -57,7 +60,7 @@ const SocialMenu: React.FC = () => {
           <span>230</span>
         </UserPhoto>
         <Data>
-          <Nick>VICENTE DO CORRE AEAEAE ADASWEDAEA</Nick>
+          <Nick>{user}</Nick>
           <Status>
             <div />
             some status here

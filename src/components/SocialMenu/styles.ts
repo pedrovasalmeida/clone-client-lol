@@ -86,7 +86,6 @@ export const Data = styled.div`
 export const Nick = styled.span`
   font-weight: bold;
   font-size: 18px;
-  text-transform: uppercase;
 
   width: 180px;
 
