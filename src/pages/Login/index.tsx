@@ -4,7 +4,7 @@ import { FiArrowRight } from 'react-icons/fi';
 import { FaFacebook, FaApple } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
 import { IoMdClose } from 'react-icons/io';
-import Logo from '../../assets/logo-lol.svg';
+import Logo from '../../assets/lol-icon.png';
 import Wallpaper from '../../assets/wallpaper-client.jpg';
 
 import Input from '../../components/Input';
