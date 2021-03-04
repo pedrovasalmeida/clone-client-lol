@@ -15,7 +15,7 @@ export const BlurredBg = styled.div<BgProps>`
   height: 100vh;
 
   background: url(${p => p.bgUrl});
-  background-size: 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   filter: blur(4px);
 `;
