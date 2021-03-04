@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React from 'react';
 
 import { AiOutlineExclamation } from 'react-icons/ai';
 import { FaUserCircle } from 'react-icons/fa';
 
 import lolIcon from '../../assets/lol-icon.png';
-import lolIconHover from '../../assets/lol-icon-hover.png';
 import BagIcon from '../../assets/bag.png';
 import EspoliosIcon from '../../assets/espolios.png';
 import UserShopIcon from '../../assets/user-shop.png';
@@ -27,15 +26,10 @@ const randomRPValue = Math.floor(Math.random() * (50000 - 100) + 100);
 const randomBPValue = Math.floor(Math.random() * (3000000 - 1000) + 1000);
 
 const Header: React.FC = () => {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <Container>
-      <PlayButton
-        onMouseEnter={() => setIsHovered(true)}
-        onMouseLeave={() => setIsHovered(false)}
-      >
-        <IconLolImage url={isHovered ? lolIconHover : lolIcon} />
+      <PlayButton>
+        <IconLolImage url={lolIcon} />
         <span>JOGAR</span>
       </PlayButton>
       <WarningIcon>
