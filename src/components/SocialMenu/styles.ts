@@ -36,6 +36,7 @@ export const UserData = styled.div`
   min-height: 100px;
 
   border-bottom: 1px solid rgba(178, 170, 142, 0.4);
+  border-top: 4px solid #725b2d;
 `;
 
 export const UserPhoto = styled.div`
@@ -66,7 +67,7 @@ export const UserPhoto = styled.div`
     font-weight: bold;
     position: absolute;
     left: 38px;
-    bottom: 12px;
+    bottom: 8px;
 
     color: #989b93;
 

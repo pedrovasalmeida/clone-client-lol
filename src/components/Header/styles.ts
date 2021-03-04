@@ -21,6 +21,7 @@ export const Container = styled.div`
   padding: 0 30px;
 
   border-bottom: 1px solid rgba(178, 170, 142, 0.4);
+  border-top: 4px solid #725b2d;
 `;
 
 export const PlayButton = styled.div`
