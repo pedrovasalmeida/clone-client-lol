@@ -4,14 +4,14 @@ import { useAuth } from '../../context/auth';
 
 /** My Components */
 import Header from '../../components/Header';
-import { Wrapper, Container } from './styles';
+
+import { Container, Wrapper } from './styles';
 
 const HomePage: React.FC = () => {
   const { user, signOut } = useAuth();
 
   return (
-    <>
-      <Wrapper />
+    <Wrapper>
       <Header />
       <Container>
         <h1>Home page</h1>
@@ -22,7 +22,7 @@ const HomePage: React.FC = () => {
           <span>Deslogar</span>
         </button>
       </Container>
-    </>
+    </Wrapper>
   );
 };
 

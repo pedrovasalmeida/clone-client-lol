@@ -1,15 +1,19 @@
 import styled from 'styled-components';
 
-export const Wrapper = styled.div``;
-
 export const Container = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  max-width: 100vw;
-  height: calc(100vh - 80px);
+  height: calc(100vh - 100px);
 
   padding: 50px;
+`;
+
+export const Wrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  max-width: 100vw;
 `;
