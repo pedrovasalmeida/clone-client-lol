@@ -1,11 +1,15 @@
 /** Packages */
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
+
 import BlurredBackground from '../../components/BlurredBackground';
+import SocialMenu from '../../components/SocialMenu';
 
 /** Pages */
 import HomePage from '../../pages/Home';
 import NotFound from '../../pages/NotFound';
+
+import { Wrapper } from './styles';
 
 const routes = [
   {
@@ -30,12 +34,15 @@ const Routes: React.FC = () => {
   return (
     <Switch>
       {routes.map(route => (
-        <Route path={route.path} exact={route.exact}>
-          {route.backgroundUrl && (
-            <BlurredBackground bgUrl={route.backgroundUrl} />
-          )}
-          {route.component}
-        </Route>
+        <Wrapper>
+          <Route path={route.path} exact={route.exact}>
+            {route.backgroundUrl && (
+              <BlurredBackground bgUrl={route.backgroundUrl} />
+            )}
+            {route.component}
+            <SocialMenu />
+          </Route>
+        </Wrapper>
       ))}
     </Switch>
   );
