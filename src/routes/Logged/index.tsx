@@ -9,6 +9,8 @@ import SocialMenu from '../../components/SocialMenu';
 import HomePage from '../../pages/Home';
 import NotFound from '../../pages/NotFound';
 
+import WallpaperHome from '../../assets/wallpaper-home.jpg';
+
 import { Wrapper } from './styles';
 
 const routes = [
@@ -18,7 +20,7 @@ const routes = [
     path: '/',
     exact: true,
     component: <HomePage />,
-    backgroundUrl: 'https://i.imgur.com/d2ZYnJq.jpg',
+    backgroundUrl: WallpaperHome,
   },
   {
     id: 999,
