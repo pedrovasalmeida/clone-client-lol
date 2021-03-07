@@ -1,6 +1,10 @@
-import styled from 'styled-components';
+import styled, { css } from 'styled-components';
 
 import { lighten, shade } from 'polished';
+
+interface FriendsProps {
+  status: string;
+}
 
 export const Container = styled.div`
   position: relative;
@@ -136,11 +140,12 @@ export const Buttons = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 4px;
+
+  margin: 8px 0;
 
   > div {
     > svg {
-      margin: 0 10px;
+      margin: 0 8px;
       color: #c3ab6d;
       cursor: pointer;
 
@@ -152,18 +157,137 @@ export const Buttons = styled.div`
 `;
 
 export const Title = styled.span`
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+
   color: #949592;
 
   font-weight: bold;
   font-size: 16px;
   text-transform: uppercase;
   letter-spacing: 2px;
+
+  &.friends-list-title {
+    margin-bottom: 20px;
+
+    > svg {
+      margin-right: 5px;
+    }
+  }
 `;
 
-export const Friends = styled.div``;
+export const FriendsList = styled.div`
+  padding-top: 10px;
+`;
 
-export const FriendPhoto = styled.div``;
+export const Friend = styled.div<FriendsProps>`
+  display: flex;
 
-export const FriendNick = styled.div``;
+  padding: 9px 5px;
 
-export const FriendStatus = styled.div``;
+  cursor: pointer;
+
+  transition: all 200ms ease;
+
+  &:hover {
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  div.friend-status {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding-left: 10px;
+  }
+
+  > div.friend-status {
+    transition: all 200ms ease;
+    ${p =>
+      p.status === 'Offline' &&
+      css`
+        color: #4a4d54;
+
+        &:hover {
+          color: #92938c;
+        }
+      `}
+
+    ${p =>
+      p.status === 'Em partida' &&
+      css`
+        > span {
+          color: #979a9a;
+        }
+
+        &:hover {
+          > span {
+            color: ${lighten(0.2, '#979a9a')};
+          }
+        }
+
+        color: #1796a9;
+      `}
+
+    ${p =>
+      p.status === 'Online' &&
+      css`
+        > span {
+          color: #979a9a;
+        }
+        color: green;
+
+        &:hover {
+          > span {
+            color: ${lighten(0.2, '#979a9a')};
+          }
+        }
+      `}
+
+    > p {
+      font-size: 14px;
+    }
+  }
+`;
+
+export const FriendPhoto = styled.div`
+  position: relative;
+
+  width: 40px;
+  height: 40px;
+  background: #010913;
+  border-radius: 50%;
+
+  border: 2px solid #c3ab6d;
+
+  &::before {
+    content: '';
+    display: block;
+
+    position: absolute;
+    right: -5px;
+    bottom: 2px;
+    width: 12px;
+    height: 12px;
+
+    border: 2px solid #010913;
+
+    background: gray;
+    border-radius: 50%;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+
+    position: absolute;
+    right: 0;
+    bottom: 7px;
+    width: 5px;
+    height: 5px;
+
+    background: #010913;
+    border-radius: 50%;
+  }
+`;
